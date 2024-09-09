@@ -1,3 +1,2 @@
 #!/bin/bash
-# Task 0: Run a Python script saved in
 python3 "$PYFILE"
