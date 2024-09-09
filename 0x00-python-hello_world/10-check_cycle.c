@@ -1,33 +1,24 @@
 #include "lists.h"
 
 /**
- * check_cycle - Checks if a singly linked list has a cycle.
- * @list: Pointer to the head of the list.
- * Description:
- * Uses Floyd's Cycle Detection Algorithm
- * (Tortoise and Hare) with two pointers:
- * 'slow' moves one step, 'fast' moves two
- * steps. If they meet, a cycle exists. 
- * If 'fast' reaches the end (NULL),
- * there's no cycle.
- * Return: 1 if a cycle is found, 0 if no cycle.
+ * check_cycle - checks if a singly linked list has a cycle in it
+ * @list: pointer to the start of the list
+ *
+ * Return: 0 if there is no cycle, 1 if there is a cycle
  */
-
 int check_cycle(listint_t *list)
 {
-	listint_t *slow = list;  // Slow pointer moving one step at a time
-	listint_t *fast = list;  // Fast pointer moving two steps at a time
+    listint_t *slow = list;
+    listint_t *fast = list;
 
-	// Traverse the list
-	while (fast && fast->next)
-	{
-		slow = slow->next;         // Move slow by one node
-		fast = fast->next->next;   // Move fast by two nodes
+    while (fast && fast->next) {
+        slow = slow->next;          // Move slow pointer by 1
+        fast = fast->next->next;    // Move fast pointer by 2
 
-		if (slow == fast)          // If they meet, a cycle exists
-			return (1);
-	}
+        if (slow == fast) {
+            return 1;               // Cycle found
+        }
+    }
 
-	// If fast pointer reaches the end, there's no cycle
-	return (0);
+    return 0;                       // No cycle found
 }
