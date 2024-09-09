@@ -1,2 +1,3 @@
 #!/bin/bash
+# Task 1: Run Python code saved in the $PYCODE environment variable
 python3 -c "$PYCODE"
