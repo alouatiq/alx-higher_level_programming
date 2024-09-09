@@ -1,3 +1,4 @@
 #!/bin/bash
-# Task 0: Run a Python script saved in the $PYFILE environment variable
+# Task 0: Run a Python script saved in
+# the $PYFILE environment variable
 python3 "$PYFILE"
