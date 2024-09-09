@@ -1,0 +1,3 @@
+#!/bin/bash
+# Task 12: Compile a Python file and output the bytecode file
+python3 -m py_compile "$PYFILE"
