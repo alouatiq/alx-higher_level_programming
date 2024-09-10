@@ -1,3 +1,2 @@
-#!/usr/bin/python3
-for char in range(97, 123):
-    print(f"{chr(char)}", end="")
+# Using a for loop with the range of ASCII values for lowercase letters
+print("{}".format("".join(chr(i) for i in range(97, 123))), end="")
