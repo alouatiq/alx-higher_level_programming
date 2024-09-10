@@ -1,3 +1,23 @@
 #!/bin/bash
-# Task 12: Compile a Python file and output the bytecode file
+
+# Check if PYFILE environment variable is set
+if [ -z "$PYFILE" ]; then
+    echo "Error: PYFILE environment variable is not set."
+    exit 1
+fi
+
+# Compile the Python file
+echo "Compiling $PYFILE ..."
 python3 -m py_compile "$PYFILE"
+
+# Get the base name of the PYFILE (without the .py extension)
+PYFILE_BASE=$(basename "$PYFILE" .py)
+
+# Move the compiled file from __pycache__ to the current directory
+# The generated .pyc file name format is PYFILE_BASE.cpython-<version>.pyc
+COMPILED_FILE=$(ls __pycache__/${PYFILE_BASE}*.pyc)
+
+# Rename the compiled file to PYFILEc
+mv "$COMPILED_FILE" "${PYFILE_BASE}.pyc"
+
+echo "Compilation successful: ${PYFILE_BASE}.pyc"
