@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-# Using a for loop with the range of ASCII values for lowercase letters
-print("{}".format("".join(chr(i) for i in range(97, 123))), end="")
+# One loop to print all characters from 'a' to 'z' using ASCII values
+for i in range(97, 123):
+    print("{}".format(chr(i)), end="")
