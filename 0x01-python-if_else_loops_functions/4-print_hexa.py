@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for number in range(99):
-    print("%d = 0x%x" % (number, number))
+    print(str(number) + " = 0x" + hex(number)[2:])
