@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-for i in range(122, 96, -1):
-    print(f"{chr(i - 32) if i % 2 else chr(i)}", end="")
+print("".join(["%c" % (i - 32 if i % 2 else i) for i in range(122, 96, -1)]), end="")
