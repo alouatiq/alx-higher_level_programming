@@ -1,9 +1,6 @@
-#!/usr/bin/python3
-for x in range(9):
-    for y in range(x + 1, 10):
-        if x == 8:
-            # For the last combination (89), print without a comma and space
-            print(f"{x}{y}")
+for first_digit in range(9):
+    for second_digit in range(first_digit + 1, 10):
+        if first_digit == 8:
+            print(f"{first_digit}{second_digit}")
             break
-        # Print other combinations with a comma and space
-        print(f"{x}{y}", end=", ")
+        print(f"{first_digit}{second_digit}", end=", ")
