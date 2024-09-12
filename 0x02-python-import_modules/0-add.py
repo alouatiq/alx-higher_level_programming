@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-from add_0 import add
+if __name__ == "__main__":
+    from add_0 import add  # Importing the add function
 
-a = 1
-b = 2
-print("{} + {} = {}".format(a, b, add(a, b)))
+    a = 1  # First variable
+    b = 2  # Second variable
+
+    # Print the result using formatted string
+    print(f"{a} + {b} = {add(a, b)}")
