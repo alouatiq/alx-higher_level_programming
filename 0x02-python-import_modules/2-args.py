@@ -1,15 +1,20 @@
 #!/usr/bin/python3
-import sys
+if __name__ == "__main__":
+    import sys  # Importing sys to access command-line arguments
 
-argc = len(sys.argv) - 1
-argv = sys.argv[1:]
+    argv = sys.argv  # List of command-line arguments
+    arg_count = len(argv) - 1  # Number of arguments (excluding script name)
 
-if argc == 0:
-    print("0 arguments.")
-elif argc == 1:
-    print("1 argument:")
-else:
-    print("{} arguments:".format(argc))
+    if arg_count == 0:
+        # If no arguments, print '0 arguments.'
+        print("0 arguments.")
+    elif arg_count == 1:
+        # If one argument, print '1 argument:'
+        print("1 argument:")
+    else:
+        # If more than one argument, print '<n> arguments:'
+        print(f"{arg_count} arguments:")
 
-for i, arg in enumerate(argv, 1):
-    print("{}: {}".format(i, arg))
+    # Print each argument with its position (starting at 1)
+    for i in range(1, len(argv)):
+        print(f"{i}: {argv[i]}")
