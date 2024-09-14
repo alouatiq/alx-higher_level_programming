@@ -8,7 +8,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *slow = *head, *fast = *head, *prev_slow = NULL;
-	listint_t *second_half, *prev_of_slow = NULL, *mid_node = NULL;
+	listint_t *second_half, *mid_node = NULL;
 	int result = 1;  /* Default is a palindrome */
 
 	if (*head == NULL || (*head)->next == NULL)  /* Empty or single element list */
