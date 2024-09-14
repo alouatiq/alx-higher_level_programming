@@ -141,7 +141,7 @@ By completing this project, you should be able to:
 
 1. Clone the repository:
    ```bash
-      git clone https://github.com/yourusername/alx-higher_level_programming.git
+	  git clone https://github.com/yourusername/alx-higher_level_programming.git
    ```
 2. Navigate to the project directory:
 ```bash
