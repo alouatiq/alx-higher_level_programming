@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-import importlib
 
-# Dynamically import the module with a numeric prefix
-safe_print_integer_err = importlib.import_module('100-safe_print_integer_err').safe_print_integer_err
+# Use exec to import the module with a numeric name
+exec('safe_print_integer_err = __import__("100-safe_print_integer_err").safe_print_integer_err')
 
 value = 89
 has_been_print = safe_print_integer_err(value)
