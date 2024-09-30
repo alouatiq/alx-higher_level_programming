@@ -1,4 +1,3 @@
-import importlib
 #!/usr/bin/python3
 safe_print_integer_err = __import__('100-safe_print_integer_err').safe_print_integer_err
 
@@ -14,7 +13,7 @@ has_been_print = safe_print_integer_err(value)
 if not has_been_print:
     print("{} is not an integer".format(value))
 
-# Test with a string (should fail)
+# Test with a string (should fail and print to stderr)
 value = "School"
 has_been_print = safe_print_integer_err(value)
 if not has_been_print:
