@@ -1,6 +1,10 @@
 #include <Python.h>
 #include <stdio.h>
 
+/* Forward declarations */
+void print_python_bytes(PyObject *p);
+void print_python_float(PyObject *p);
+
 /**
  * print_python_list - Prints basic info about Python lists.
  * @p: PyObject representing the Python list
