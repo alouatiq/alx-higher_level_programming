@@ -1,7 +1,7 @@
 #include <Python.h>
 #include <stdio.h>
 
-/* Function to print info about a Python list object */
+/* Print information about a Python list */
 void print_python_list(PyObject *p)
 {
     Py_ssize_t size, allocated, i;
@@ -32,7 +32,7 @@ void print_python_list(PyObject *p)
     }
 }
 
-/* Function to print info about a Python bytes object */
+/* Print information about a Python bytes object */
 void print_python_bytes(PyObject *p)
 {
     Py_ssize_t size, i, limit;
@@ -48,12 +48,12 @@ void print_python_bytes(PyObject *p)
 
     size = PyBytes_Size(p);
     string = PyBytes_AsString(p);
+
     printf("  size: %zd\n", size);
     printf("  trying string: %s\n", string ? string : "(null)");
 
     limit = size < 10 ? size : 9;  // Print up to 10 bytes
     printf("  first %zd bytes:", limit + 1);
-
     for (i = 0; i <= limit; i++)
     {
         printf(" %02x", (unsigned char)string[i]);
@@ -61,7 +61,7 @@ void print_python_bytes(PyObject *p)
     printf("\n");
 }
 
-/* Function to print info about a Python float object */
+/* Print information about a Python float object */
 void print_python_float(PyObject *p)
 {
     double value;
@@ -75,5 +75,5 @@ void print_python_float(PyObject *p)
     }
 
     value = PyFloat_AsDouble(p);
-    printf("  value: %.15g\n", value);
+    printf("  value: %.15g\n", value);  // Correct precision for float
 }
