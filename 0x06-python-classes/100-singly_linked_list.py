@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This module defines a class for a singly linked list node and a class to manage the list.
+This module defines a class for a singly linked
+list node and a class to manage the list.
 """
 
 class Node:
