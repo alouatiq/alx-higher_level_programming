@@ -6,15 +6,16 @@ This module defines a class MagicClass based on the provided bytecode.
 
 
 class MagicClass:
-    """A class that represents a circle with a radius and calculates area and circumference."""
+    """
+    A class that represents a circle with
+    a radius and calculates area and circumference.
+    """
 
     def __init__(self, radius=0):
         """
         Initializes the MagicClass with a radius.
-        
         Args:
             radius (float or int): The radius of the circle (default is 0).
-        
         Raises:
             TypeError: If radius is not a number (float or int).
         """
@@ -26,7 +27,6 @@ class MagicClass:
     def area(self):
         """
         Calculates the area of the circle.
-        
         Returns:
             float: The area of the circle.
         """
@@ -35,7 +35,6 @@ class MagicClass:
     def circumference(self):
         """
         Calculates the circumference of the circle.
-        
         Returns:
             float: The circumference of the circle.
         """
