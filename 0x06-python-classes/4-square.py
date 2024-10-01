@@ -3,8 +3,12 @@
 This module defines a class Square with size validation, getters, and setters.
 """
 
+
 class Square:
-    """A class that defines a square with private size and a public area method."""
+    """
+    A class that defines a square with
+    private size and a public area method.
+    """
 
     def __init__(self, size=0):
         """Initializes the square, with size validation."""
