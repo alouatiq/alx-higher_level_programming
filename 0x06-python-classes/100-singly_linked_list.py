@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines a class for a singly linked
-list node and a class to manage the list.
+This module defines a class for a singly linked list node and a class to manage the list.
 """
 
 
@@ -11,6 +10,7 @@ class Node:
     def __init__(self, data, next_node=None):
         """
         Initializes a new node for the singly linked list.
+
         Args:
             data (int): The data for the node.
             next_node (Node): The next node in the list (default is None).
@@ -53,24 +53,22 @@ class SinglyLinkedList:
     def sorted_insert(self, value):
         """
         Inserts a new Node into the list in increasing order of the data.
+
         Args:
             value (int): The data for the new node.
         """
         new_node = Node(value)
         if self.__head is None or self.__head.data >= value:
-            # Insert at the head
             new_node.next_node = self.__head
             self.__head = new_node
         else:
-# Find the correct position to insert
-current = self.__head
-while (current.next_node is not None and 
-       current.next_node.data < value):
-    current = current.next_node
-
-new_node.next_node = current.next_node
-current.next_node = new_node
-
+            # Find the correct position to insert
+            current = self.__head
+            while (current.next_node is not None and
+                   current.next_node.data < value):
+                current = current.next_node
+            new_node.next_node = current.next_node
+            current.next_node = new_node
 
     def __str__(self):
         """Returns a string representation of the singly linked list."""
