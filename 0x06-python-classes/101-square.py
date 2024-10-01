@@ -1,10 +1,15 @@
 #!/usr/bin/python3
 """
-This module defines a class Square with size, position, and printing using __str__.
+This module defines a class Square with size,
+position, and printing using __str__.
 """
 
+
 class Square:
-    """A class that defines a square with size, position, area, and printing."""
+    """
+    A class that defines a square with size,
+    position, area, and printing.
+    """
 
     def __init__(self, size=0, position=(0, 0)):
         """Initializes the square with size and position validation."""
@@ -45,7 +50,10 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """Prints the square with the character # or an empty line if size is 0."""
+        """
+        Prints the square with the character #
+        or an empty line if size is 0.
+        """
         if self.__size == 0:
             print("")
         else:
