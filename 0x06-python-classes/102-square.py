@@ -3,6 +3,7 @@
 This module defines a class Square with comparison operations based on area.
 """
 
+
 class Square:
     """A class that defines a square with size and can compare areas."""
 
@@ -45,7 +46,10 @@ class Square:
         return False
 
     def __le__(self, other):
-        """Compares if the square is smaller or equal to another based on area."""
+        """
+        Compares if the square is smaller or
+        equal to another based on area.
+        """
         if isinstance(other, Square):
             return self.area() <= other.area()
         return False
@@ -57,7 +61,10 @@ class Square:
         return False
 
     def __ge__(self, other):
-        """Compares if the square is greater or equal to another based on area."""
+        """
+        Compares if the square is greater or
+        equal to another based on area.
+        """
         if isinstance(other, Square):
             return self.area() >= other.area()
         return False
