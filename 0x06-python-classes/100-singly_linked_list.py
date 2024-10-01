@@ -62,13 +62,15 @@ class SinglyLinkedList:
             new_node.next_node = self.__head
             self.__head = new_node
         else:
-            # Find the correct position to insert
-            current = self.__head
-            while current.next_node is not None and 
-            current.next_node.data < value:
-                current = current.next_node
-            new_node.next_node = current.next_node
-            current.next_node = new_node
+# Find the correct position to insert
+current = self.__head
+while (current.next_node is not None and 
+       current.next_node.data < value):
+    current = current.next_node
+
+new_node.next_node = current.next_node
+current.next_node = new_node
+
 
     def __str__(self):
         """Returns a string representation of the singly linked list."""
