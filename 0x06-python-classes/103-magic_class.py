@@ -4,6 +4,7 @@ import math
 This module defines a MagicClass based on the given bytecode.
 """
 
+
 class MagicClass:
     """A class that calculates the area and circumference of a circle."""
 
