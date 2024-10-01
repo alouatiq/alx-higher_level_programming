@@ -3,12 +3,14 @@
 This module defines a class Square with size validation.
 """
 
+
 class Square:
     """A class that defines a square by its size and validates it."""
 
     def __init__(self, size=0):
         """
-        Initializes the square with a size attribute, ensuring it's an integer and >= 0.
+        Initializes the square with a size attribute,
+        ensuring it's an integer and >= 0.
         Args:
             size (int): The size of the square (default is 0).
         Raises:
