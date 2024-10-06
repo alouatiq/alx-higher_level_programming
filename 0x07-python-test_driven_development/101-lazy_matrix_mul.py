@@ -29,5 +29,7 @@ def lazy_matrix_mul(m_a, m_b):
     # Use NumPy to perform matrix multiplication
     try:
         return np.matmul(m_a, m_b)
-    except ValueError:
-        raise ValueError("m_a and m_b can't be multiplied")
+    except ValueError as e:
+        if "scalar operands" in str(e):
+            raise TypeError("matmul: Input must be a list of lists of integers or floats")
+        raise
