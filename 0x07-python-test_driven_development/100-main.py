@@ -13,5 +13,3 @@ try:
     print(matrix_mul(1, [[1, 2]]))
 except Exception as e:
     print(e)
-
-
