@@ -1,0 +1,32 @@
+=========================
+Doctest for matrix_mul
+=========================
+
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+>>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+[[13, 16]]
+
+>>> matrix_mul([[1]], [[2]])
+[[2]]
+
+>>> matrix_mul([[1, 2]], [[3, 4]])
+Traceback (most recent call last):
+    ...
+ValueError: m_a and m_b can't be multiplied
+
+>>> matrix_mul(1, [[1, 2]])
+Traceback (most recent call last):
+    ...
+TypeError: m_a must be a list
+
+>>> matrix_mul([[1, 2]], "not a matrix")
+Traceback (most recent call last):
+    ...
+TypeError: m_b must be a list
+
+>>> matrix_mul([[1, 2], [3]], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+    ...
+TypeError: each row of m_a must be of the same size
