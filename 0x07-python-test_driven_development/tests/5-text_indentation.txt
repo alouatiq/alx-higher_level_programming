@@ -12,11 +12,13 @@ How are you?
 Fine:
 <BLANKLINE>
 Thanks.
+<BLANKLINE>
 
 >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo?")
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 <BLANKLINE>
 Quonam modo?
+<BLANKLINE>
 
 >>> text_indentation("")
 <BLANKLINE>
