@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This module provides a function `lazy_matrix_mul` that multiplies two matrices using NumPy.
+This module provides a function `lazy_matrix_mul`
+that multiplies two matrices using NumPy.
 """
 
 import numpy as np
