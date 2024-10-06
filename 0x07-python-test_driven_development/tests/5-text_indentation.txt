@@ -1,0 +1,30 @@
+=========================
+Doctest for text_indentation
+=========================
+
+>>> text_indentation("Hello. How are you? Fine: Thanks.")
+Hello.
+
+How are you?
+
+Fine:
+
+Thanks.
+
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo?")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Quonam modo?
+
+>>> text_indentation("")
+<BLANKLINE>
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text_indentation("Hello:  There")
+Hello:
+
+There
