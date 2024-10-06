@@ -7,14 +7,14 @@ This module provides a function `matrix_mul` that multiplies two matrices.
 def matrix_mul(m_a, m_b):
     """
     Multiplies two matrices (m_a and m_b).
-    
+
     Args:
         m_a: The first matrix, must be a list of lists of integers or floats.
         m_b: The second matrix, must be a list of lists of integers or floats.
-    
+
     Returns:
         A new matrix which is the result of multiplying m_a by m_b.
-    
+
     Raises:
         TypeError: If m_a or m_b is not a list of lists of integers or floats.
         ValueError: If m_a or m_b is empty or if they can't be multiplied.
@@ -60,5 +60,5 @@ def matrix_mul(m_a, m_b):
                 sum_result += m_a[i][k] * m_b[k][j]
             row_result.append(sum_result)
         result.append(row_result)
-    
+
     return result

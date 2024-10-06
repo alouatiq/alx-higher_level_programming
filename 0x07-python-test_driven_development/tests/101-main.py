@@ -13,3 +13,5 @@ try:
     print(lazy_matrix_mul(1, [[1, 2]]))  # Expected error: input is not a list
 except Exception as e:
     print(e)
+
+

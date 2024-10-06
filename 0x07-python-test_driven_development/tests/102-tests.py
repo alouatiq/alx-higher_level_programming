@@ -23,3 +23,5 @@ lib.print_python_string(s)  # Expected output: string info
 
 s = b"The spoon does not exist"  # Expected error: invalid string
 lib.print_python_string(s)
+
+

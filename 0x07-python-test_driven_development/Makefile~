@@ -1,0 +1,53 @@
+# Makefile for the Python TDD project
+
+# Compiler options for the C code
+CC = gcc
+CFLAGS = -shared -Wl,-soname,libPython.so -o libPython.so -fPIC -I/usr/include/python3.4
+CFILES = 102-python.c
+LIBRARY = libPython.so
+
+# Python scripts
+PYTHON = python3
+
+# Test files
+DOCTESTS = tests/*.txt
+UNITTESTS = tests/6-max_integer_test.py
+MAIN_FILES = 0-main.py 2-main.py 3-main.py 4-main.py 5-main.py 101-main.py
+TEST_SCRIPT = tests/102-tests.py
+
+# Default target
+all: run_tests run_main_scripts
+
+# Compile the C code (for Task 8)
+compile_c:
+	$(CC) $(CFLAGS) $(CFILES)
+
+# Run doctests
+run_doctests:
+	$(PYTHON) -m doctest -v $(DOCTESTS)
+
+# Run unittests
+run_unittests:
+	$(PYTHON) -m unittest $(UNITTESTS)
+
+# Run all Python main scripts
+run_main_scripts: $(MAIN_FILES)
+	@for script in $(MAIN_FILES); do \
+		echo "Running $$script..."; \
+		./$$script; \
+		echo ""; \
+	done
+
+# Run Task 8 (C function tests)
+run_task8:
+	$(PYTHON) $(TEST_SCRIPT)
+
+# Full test coverage (doctests, unittests, Task 8)
+run_tests: compile_c run_doctests run_unittests run_task8
+
+# Clean up generated files
+clean:
+	rm -f $(LIBRARY) *.pyc *.pyo __pycache__/*
+
+# Phony targets
+.PHONY: all compile_c run_doctests run_unittests run_main_scripts run_task8 run_tests clean
