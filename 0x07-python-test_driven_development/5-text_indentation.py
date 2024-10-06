@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 """
 This module provides a function `text_indentation`
-that adds two new lines
-after `.`, `?`, and `:`.
+that adds two new lines after `.`, `?`, and `:`.
 """
-
 
 def text_indentation(text):
     """
@@ -19,6 +17,11 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+
+    # Handle empty string case by printing a blank line
+    if text == "":
+        print()
+        return
 
     # Remove leading/trailing spaces and format text
     i = 0
