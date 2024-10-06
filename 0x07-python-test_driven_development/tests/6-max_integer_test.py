@@ -3,8 +3,7 @@
 Unittests for max_integer([..]).
 """
 import unittest
-from 6-max_integer import max_integer
-
+from max_integer import max_integer  # Fixed import
 
 class TestMaxInteger(unittest.TestCase):
     """Define test cases for the max_integer function"""
@@ -45,8 +44,5 @@ class TestMaxInteger(unittest.TestCase):
         """Test a list where all elements are the same"""
         self.assertEqual(max_integer([3, 3, 3, 3]), 3)
 
-
 if __name__ == "__main__":
     unittest.main()
-
-
