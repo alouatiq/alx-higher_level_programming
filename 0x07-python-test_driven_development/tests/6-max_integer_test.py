@@ -3,7 +3,14 @@
 Unittests for max_integer([..]).
 """
 import unittest
-from max_integer import max_integer  # Fixed import
+import sys
+import os
+
+# Add the directory containing '6-max_integer.py' to the system path
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
+
+from 6-max_integer import max_integer  # Import the file as before
+
 
 class TestMaxInteger(unittest.TestCase):
     """Define test cases for the max_integer function"""
@@ -43,6 +50,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_all_same(self):
         """Test a list where all elements are the same"""
         self.assertEqual(max_integer([3, 3, 3, 3]), 3)
+
 
 if __name__ == "__main__":
     unittest.main()
