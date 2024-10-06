@@ -2,18 +2,20 @@
 Doctest for text_indentation
 =========================
 
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
 >>> text_indentation("Hello. How are you? Fine: Thanks.")
 Hello.
-
+<BLANKLINE>
 How are you?
-
+<BLANKLINE>
 Fine:
-
+<BLANKLINE>
 Thanks.
 
 >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo?")
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
+<BLANKLINE>
 Quonam modo?
 
 >>> text_indentation("")
@@ -26,5 +28,5 @@ TypeError: text must be a string
 
 >>> text_indentation("Hello:  There")
 Hello:
-
+<BLANKLINE>
 There
