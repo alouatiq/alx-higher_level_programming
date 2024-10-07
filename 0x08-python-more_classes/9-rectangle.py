@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Defines a class Rectangle with width, height, area, perimeter, string representation, eval, custom deletion message, instance counting, custom print symbol, comparison method, and a square class method."""
+"""Defines a class Rectangle with width, height, area, perimeter, string representation,
+eval, custom deletion message, instance counting, custom print symbol, comparison method,
+and a square class method."""
 
 
 class Rectangle:
@@ -82,7 +84,8 @@ class Rectangle:
         return 2 * (self.width + self.height)
 
     def __str__(self):
-        """Return a string representation of the rectangle using the print_symbol.
+        """Return a string representation of the rectangle
+        using the print_symbol.
 
         Returns:
             str: A string representation of the rectangle, or an empty
@@ -102,7 +105,8 @@ class Rectangle:
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        """Print a message when a Rectangle instance is deleted and decrement the instance count."""
+        """Print a message when a Rectangle instance is
+        deleted and decrement the instance count."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
@@ -116,7 +120,8 @@ class Rectangle:
         Raises:
             TypeError: If rect_1 or rect_2 is not an instance of Rectangle.
         Returns:
-            Rectangle: The rectangle with the larger area, or rect_1 if both are equal.
+            Rectangle: The rectangle with the larger area,
+            or rect_1 if both are equal.
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
@@ -134,6 +139,7 @@ class Rectangle:
         Args:
             size (int): The size of the sides of the square.
         Returns:
-            Rectangle: A new Rectangle instance with width and height equal to size.
+            Rectangle: A new Rectangle instance with
+            width and height equal to size.
         """
         return cls(size, size)
