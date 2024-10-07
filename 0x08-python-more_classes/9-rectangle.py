@@ -88,7 +88,6 @@ class Rectangle:
         using the print_symbol.
 
         Returns:
-            str: A string representation of the rectangle, or an empty
             string if width or height is 0.
         """
         if self.width == 0 or self.height == 0:
@@ -118,7 +117,8 @@ class Rectangle:
             rect_1 (Rectangle): The first rectangle.
             rect_2 (Rectangle): The second rectangle.
         Raises:
-            TypeError: If rect_1 or rect_2 is not an instance of Rectangle.
+            TypeError: If rect_1 or rect_2 is not
+            an instance of Rectangle.
         Returns:
             Rectangle: The rectangle with the larger area,
             or rect_1 if both are equal.
@@ -134,7 +134,8 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Create a new Rectangle instance with equal width and height.
+        """Create a new Rectangle instance with equal
+        width and height.
 
         Args:
             size (int): The size of the sides of the square.
