@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Defines a class Rectangle with width, height, area, perimeter, string representation,
-eval, custom deletion message, instance counting, and custom print symbol."""
+"""Defines a class Rectangle with width, height, area,
+perimeter, string representation, eval, custom deletion message,
+instance counting, and custom print symbol."""
 
 
 class Rectangle:
