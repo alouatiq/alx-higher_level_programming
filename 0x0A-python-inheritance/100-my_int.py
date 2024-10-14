@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+"""T100"""
+
 class MyInt(int):
-    """MyInt class is a rebel, it inverts == and != operators."""
+    """MyInt class is a rebel
+    it inverts == and != operators."""
 
     def __eq__(self, other):
         """Inverts the == operator."""
