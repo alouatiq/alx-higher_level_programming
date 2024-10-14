@@ -1,9 +1,13 @@
 #!/usr/bin/python3
+"""T11"""
+
+
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Square class that inherits from Rectangle with a custom str method."""
+    """Square class that inherits from
+    Rectangle with a custom str method."""
 
     def __init__(self, size):
         """Initializes a square with the given size."""
