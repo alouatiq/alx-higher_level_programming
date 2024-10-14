@@ -1,3 +1,8 @@
+# 0x0A. Python - Inheritance
+
+This project covers the concept of inheritance in Python, including single inheritance, multiple inheritance, method overriding, and using built-in functions like isinstance, issubclass, type, and super.
+
+
 ```
 0x0A-python-inheritance/
 ├── 0-lookup.py
