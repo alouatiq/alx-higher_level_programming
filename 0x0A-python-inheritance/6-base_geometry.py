@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""T6"""
 
 
 class BaseGeometry:
