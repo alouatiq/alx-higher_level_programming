@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""T2"""
+"""T3"""
 
 
 def is_kind_of_class(obj, a_class):
