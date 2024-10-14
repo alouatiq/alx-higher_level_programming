@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""T1"""
 
 def is_same_class(obj, a_class):
     """Returns True if the object is exactly
