@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""Module for task 1"""
+
 class MyList(list):
-    """A class that inherits from list with a method to print the list sorted."""
+    """Inherits from list with additional print_sorted method"""
 
     def print_sorted(self):
-        """Prints the list, but sorted (ascending)."""
+        """Prints the list in ascending sorted order"""
         print(sorted(self))
