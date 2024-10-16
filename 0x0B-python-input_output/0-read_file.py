@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Module that contains a function to read a file and print its contents to stdout."""
+"""Module that contains a function to read
+a file and print its contents to stdout."""
 
 
 def read_file(filename=""):
