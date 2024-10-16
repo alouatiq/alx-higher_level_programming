@@ -4,7 +4,7 @@
 
 class Student:
     """Represents a student with first name, last name, and age."""
-    
+
     def __init__(self, first_name, last_name, age):
         """Initializes the student with the provided attributes."""
         self.first_name = first_name

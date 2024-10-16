@@ -14,7 +14,7 @@ try:
             code = parts[-2]
             if code in valid_codes:
                 status_codes[code] = status_codes.get(code, 0) + 1
-        
+
         if i % 10 == 0:
             print("File size: {}".format(file_size))
             for code in sorted(status_codes):
