@@ -33,5 +33,6 @@ class TestBase(unittest.TestCase):
         dictionary_list = Base.from_json_string(json_string)
         self.assertEqual(dictionary_list[0]["width"], 10)
 
+
 if __name__ == "__main__":
     unittest.main()
