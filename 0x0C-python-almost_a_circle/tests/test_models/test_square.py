@@ -5,6 +5,7 @@
 import unittest
 from models.square import Square
 
+
 class TestSquare(unittest.TestCase):
     """Test cases for the Square class"""
 
@@ -29,6 +30,7 @@ class TestSquare(unittest.TestCase):
         s.update(10, 7)
         self.assertEqual(s.id, 10)
         self.assertEqual(s.size, 7)
+
 
 if __name__ == "__main__":
     unittest.main()
