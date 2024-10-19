@@ -5,6 +5,7 @@
 import unittest
 from models.rectangle import Rectangle
 
+
 class TestRectangle(unittest.TestCase):
     """Test cases for the Rectangle class"""
 
@@ -28,6 +29,7 @@ class TestRectangle(unittest.TestCase):
         """Test invalid height raises ValueError"""
         with self.assertRaises(ValueError):
             r = Rectangle(10, -2)
+
 
 if __name__ == "__main__":
     unittest.main()
