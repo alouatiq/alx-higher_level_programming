@@ -1,5 +1,6 @@
 -- Script to list all shows and their linked genre IDs
--- The output includes the show title and genre ID, sorted by title and genre ID
+-- Each record displays the show title and genre ID
+-- Results are sorted by show title and genre ID in ascending order
 
 SELECT tv_shows.title, tv_show_genres.genre_id
 FROM tv_shows
