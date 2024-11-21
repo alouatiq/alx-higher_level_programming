@@ -1,14 +1,16 @@
--- Ensure the correct database is used
+-- Ensure the database exists and select it
+DROP DATABASE IF EXISTS hbtn_0c_0;
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 USE hbtn_0c_0;
 
--- Convert the database to UTF8 (utf8mb4)
-ALTER DATABASE hbtn_0c_0 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- Create the table if it does not exist
+CREATE TABLE IF NOT EXISTS first_table (
+    id INT,
+    name VARCHAR(256),
+    score INT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Convert the table to UTF8 (utf8mb4)
+-- Convert database, table, and column to UTF-8
+ALTER DATABASE hbtn_0c_0 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 ALTER TABLE first_table CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
--- Convert the column 'name' to UTF8 (utf8mb4) with the correct collation
 ALTER TABLE first_table MODIFY name VARCHAR(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
--- Validate the table's updated structure
-SHOW CREATE TABLE first_table;
