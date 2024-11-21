@@ -3,8 +3,8 @@
 -- Results are sorted in ascending order by show title and genre name
 
 SELECT 
-    tv_shows.title AS title,
-    tv_genres.name AS genre
+    tv_shows.title AS title, 
+    tv_genres.name AS name
 FROM 
     tv_shows
 LEFT JOIN 
