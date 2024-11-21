@@ -1,14 +1,14 @@
--- Select the database to ensure the commands are applied in the correct context
+-- Ensure the correct database is used
 USE hbtn_0c_0;
 
 -- Convert the database to UTF8 (utf8mb4)
-ALTER DATABASE hbtn_0c_0 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+ALTER DATABASE hbtn_0c_0 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- Convert the table to UTF8 (utf8mb4)
 ALTER TABLE first_table CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- Convert the column 'name' to UTF8 (utf8mb4) with the correct collation
-ALTER TABLE first_table CHANGE name name VARCHAR(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE first_table MODIFY name VARCHAR(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
--- Display the updated table structure
+-- Validate the table's updated structure
 SHOW CREATE TABLE first_table;
