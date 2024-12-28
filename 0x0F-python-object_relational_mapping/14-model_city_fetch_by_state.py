@@ -9,7 +9,10 @@ from model_state import Base, State
 from model_city import City
 
 if __name__ == "__main__":
-    engine = create_engine(f'mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}@localhost/{sys.argv[3]}', pool_pre_ping=True)
+    engine = create_engine(
+        f'mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}@localhost/{sys.argv[3]}',
+        pool_pre_ping=True
+    )
     Session = sessionmaker(bind=engine)
     session = Session()
 
@@ -21,4 +24,3 @@ if __name__ == "__main__":
         print(f"{state.name}: ({city.id}) {city.name}")
 
     session.close()
-
