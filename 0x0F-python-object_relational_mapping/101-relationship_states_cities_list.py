@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Lists all State objects and their corresponding City objects from the database hbtn_0e_101_usa
+Lists all State objects and their corresponding City
+objects from the database hbtn_0e_101_usa
 """
 import sys
 from sqlalchemy import create_engine
@@ -19,5 +20,3 @@ if __name__ == "__main__":
             print(f"\t{city.id}: {city.name}")
 
     session.close()
-  
-
