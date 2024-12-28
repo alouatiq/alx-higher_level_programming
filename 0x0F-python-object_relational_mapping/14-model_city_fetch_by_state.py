@@ -21,3 +21,4 @@ if __name__ == "__main__":
         print(f"{state.name}: ({city.id}) {city.name}")
 
     session.close()
+
