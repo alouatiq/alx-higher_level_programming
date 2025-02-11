@@ -19,8 +19,7 @@ request(url, { json: true }, (error, response, body) => {
     for (let charUrl of film.characters) {
       // Split URL by '/' and filter out empty strings
       const parts = charUrl.split('/').filter(Boolean);
-      // Get the last segment which should be the id
-      const id = parts[parts.length - 1];
+      const id = parts[parts.length - 1]; // Get the last segment which should be the id
       if (id === '18') {
         count++;
         break;  // Count this film once and move to the next film
