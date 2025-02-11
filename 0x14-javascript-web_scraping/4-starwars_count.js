@@ -3,28 +3,25 @@ const request = require('request');
 
 const url = process.argv[2];
 
-request(url, { json: true }, (error, response, body) => {
-  if (error) {
-    console.error(error);
+request(url, { json: true }, (err, res, body) => {
+  if (err) {
+    console.error(err);
     return;
   }
-  if (response.statusCode !== 200) {
-    console.error(`Error: ${response.statusCode}`);
+  if (res.statusCode !== 200) {
+    console.error(`Error: ${res.statusCode}`);
     return;
   }
   let count = 0;
-  const films = body.results;
-  films.forEach((film) => {
-    // Check if the film's characters include character with id "18"
-    for (let charUrl of film.characters) {
-      // Split URL by '/' and filter out empty strings
-      const parts = charUrl.split('/').filter(Boolean);
-      const id = parts[parts.length - 1]; // Get the last segment which should be the id
-      if (id === '18') {
+  // Use a regex to match URLs that end with /18 or /18/
+  const wedgeRegex = /\/18\/?$/;
+  for (const film of body.results) {
+    for (const charUrl of film.characters) {
+      if (wedgeRegex.test(charUrl)) {
         count++;
-        break;  // Count this film once and move to the next film
+        break; // Once found in a film, move to the next film.
       }
     }
-  });
+  }
   console.log(count);
 });
