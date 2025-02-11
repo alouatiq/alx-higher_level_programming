@@ -2,13 +2,13 @@
 const request = require('request');
 
 const url = process.argv[2];
-
-request(url, (error, response) => {
-  if (error) {
-      console.error('error:', error);
-      // Print the error if one occurred
-  } else {
-      console.log('code:', response && response.statusCode);
-      // Print the response status code if a response was received
+request(url, (error, response, body) => {
+  // Even if an error occurs (unlikely for valid HTTP responses),
+  // we print the status code if available.
+  if (response) {
+    console.log(`code: ${response.statusCode}`);
+  } else if (error) {
+    // Fallback in case there's no response object.
+    console.log(`code: ${error.code}`);
   }
 });
